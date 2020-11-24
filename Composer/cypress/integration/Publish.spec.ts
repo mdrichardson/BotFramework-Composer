@@ -61,18 +61,8 @@ context('Publish Page', () => {
     cy.contains('All profiles');
     cy.findByTestId('Publish').findByTestId('target-list').should('exist');
 
-    // status list exist
+    // TODO: Check if the added publishing target exists in the publish page
     cy.contains('Bot');
     cy.contains('Date');
-    cy.findByTestId('Publish').findByTestId('publish-status-list').should('exist');
-
-    // add profile
-
-    // new profile should exist in target list
-    cy.findByTestId('Publish')
-      .findByTestId('target-list')
-      .within(() => {
-        cy.findByText('testProfile').should('exist');
-      });
   });
 });
