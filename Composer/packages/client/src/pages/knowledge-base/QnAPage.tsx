@@ -33,7 +33,7 @@ const QnAPage: React.FC<QnAPageProps> = (props) => {
   const actions = useRecoilValue(dispatcherState);
   const dialogs = useRecoilValue(dialogsSelectorFamily(projectId));
   const qnaFiles = useRecoilValue(qnaFilesState(projectId));
-  //To do: support other languages
+  //To do: support other languages on qna
   const locale = 'en-us';
   //const locale = useRecoilValue(localeState);
   const [createOnDialogId, setCreateOnDialogId] = useState('');
