@@ -27,6 +27,13 @@ import { getPendingNotificationCardProps, getPublishedNotificationCardProps } fr
 import { PullDialog } from './pullDialog';
 
 const publishStatusInterval = 10000;
+const usePrevious = (value) => {
+  const ref = useRef();
+  useEffect(() => {
+    ref.current = value;
+  });
+  return ref.current;
+};
 const Publish: React.FC<RouteComponentProps<{ projectId: string; targetName?: string }>> = (props) => {
   const { projectId = '' } = props;
   const botProjectData = useRecoilValue(localBotsDataSelector);
@@ -218,14 +225,6 @@ const Publish: React.FC<RouteComponentProps<{ projectId: string; targetName?: st
       setSelectedVersion(null);
     }
   }, [projectId]);
-
-  const usePrevious = (value) => {
-    const ref = useRef();
-    useEffect(() => {
-      ref.current = value;
-    });
-    return ref.current;
-  };
 
   const prevBotStatusList: IBotStatus[] | undefined = usePrevious(botStatusList);
   useEffect(() => {
