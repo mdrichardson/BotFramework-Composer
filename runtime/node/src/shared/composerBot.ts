@@ -20,6 +20,7 @@ import {
   ResourceExtensions,
   SkillExtensions,
 } from 'botbuilder-dialogs-adaptive';
+import { TeamsComponentRegistration } from '../../../../../adaptiveTeams-botbuilder-js/libraries/botbuilder-dialogs-adaptive-teams';
 import { ResourceExplorer } from 'botbuilder-dialogs-declarative';
 import { SimpleCredentialProvider, SkillValidation } from 'botframework-connector';
 import { BotSettings } from './settings';
@@ -54,6 +55,7 @@ export class ComposerBot extends ActivityHandler {
     this.settings = getSettings(this.projectRoot);
 
     ComponentRegistration.add(new AdaptiveComponentRegistration());
+    ComponentRegistration.add(new TeamsComponentRegistration());
     ComponentRegistration.add(new QnAMakerComponentRegistration());
     ComponentRegistration.add(new LuisComponentRegistration());
 
