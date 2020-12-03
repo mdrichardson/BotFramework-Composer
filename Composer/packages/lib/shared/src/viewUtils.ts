@@ -31,6 +31,9 @@ export enum DialogGroup {
   RECOGNIZER = 'RECOGNIZER',
   SELECTOR = 'SELECTOR',
   OTHER = 'OTHER',
+  TEAMS_ACTION_TYPES = 'TEAMS_ACTION_TYPES',
+  TEAMS_RESPONSE_TYPES = 'TEAMS_RESPONSE_TYPES',
+  TEAMS_EVENTS = 'TEAMS_EVENTS',
 }
 
 export interface DialogGroupItem {
@@ -132,6 +135,34 @@ export const dialogGroups: DialogGroupsMap = {
       SDKKinds.OnMessageUpdateActivity,
     ],
   },
+  [DialogGroup.TEAMS_EVENTS]: {
+    label: formatMessage('Teams Events'),
+    types: [
+      SDKKinds.OnAppBasedLinkQuery,
+      // SDKKinds.OnCardAction,
+      // SDKKinds.OnFileConsent,
+      // SDKKinds.OnMessagingExtensionCardButtonClicked,
+      // SDKKinds.OnMessagingExtensionConfigurationQuerySettingUrl,
+      // SDKKinds.OnMessagingExtensionQuery,
+      // SDKKinds.OnMessagingExtensionFetchTask,
+      // SDKKinds.OnMessagingExtensionConfigurationSetting,
+      // SDKKinds.OnMessagingExtensionSelectItem,
+      // SDKKinds.OnMessagingExtensionSubmitAction,
+      // SDKKinds.OnO365ConnectorCardAction,
+      // SDKKinds.OnTaskModuleFetch,
+      // SDKKinds.OnTaskModuleSubmit,
+      // SDKKinds.OnChannelCreated,
+      // SDKKinds.OnChannelDeleted,
+      // SDKKinds.OnChannelRenamed,
+      // SDKKinds.OnChannelRestored,
+      // SDKKinds.OnTeamArchived,
+      // SDKKinds.OnTeamUnarchived,
+      // SDKKinds.OnTeamDeleted,
+      // SDKKinds.OnTeamHardDeleted,
+      // SDKKinds.OnTeamRestored,
+      // SDKKinds.OnTeamRenamed,
+    ],
+  },
   [DialogGroup.RECOGNIZER]: {
     label: formatMessage('Recognizers'),
     types: [SDKKinds.LuisRecognizer, /* SDKKinds.MultiLanguageRecognizers, */ SDKKinds.RegexRecognizer],
@@ -150,6 +181,29 @@ export const dialogGroups: DialogGroupsMap = {
     label: formatMessage('Other'),
     types: [SDKKinds.AdaptiveDialog],
   },
+  // [DialogGroup.TEAMS_ACTION_TYPES]: {
+  //   label: formatMessage('Teams Actions'),
+  //   types: [
+  //     SDKKinds.GetMeetingParticipant,
+  //     SDKKinds.GetMember,
+  //     SDKKinds.GetPagedMembers,
+  //     SDKKinds.GetPagedTeamMembers,
+  //     SDKKinds.GetTeamChannels,
+  //     SDKKinds.GetTeamDetails,
+  //     SDKKinds.GetTeamMember,
+  //   ],
+  // },
+  // [DialogGroup.TEAMS_RESPONSE_TYPES]: {
+  //   label: formatMessage('Teams Responses'),
+  //   types: [
+  //     SDKKinds.SendMessageToTeamsChannel,
+  //     SDKKinds.SendTaskModuleCardResponse,
+  //     SDKKinds.SendTaskModuleUrlResponse,
+  //     SDKKinds.SendTaskModuleMessageResponse,
+  //     SDKKinds.SendMessagingExtensionAuthResponse,
+  //     SDKKinds.SendMessagingExtensionQueryLinkResponse,
+  //   ],
+  // },
 };
 
 export function getDialogGroupByType(type) {
@@ -164,6 +218,7 @@ export function getDialogGroupByType(type) {
         case DialogGroup.LOOPING:
         case DialogGroup.EVENTS:
         case DialogGroup.ADVANCED_EVENTS:
+        case DialogGroup.TEAMS_EVENTS:
           dialogType = key;
           break;
         case DialogGroup.STEP:

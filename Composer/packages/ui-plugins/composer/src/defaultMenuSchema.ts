@@ -13,6 +13,8 @@ const SubmenuNames = {
   PropertyManagement: formatMessage('Manage properties'),
   AccessExternalResources: formatMessage('Access external resources'),
   Debugging: formatMessage('Debugging options'),
+  TeamsActions: formatMessage('Teams actions'),
+  TeamsResponses: formatMessage('Teams responses'),
 };
 
 export const DefaultMenuSchema: MenuUISchema = {
@@ -170,6 +172,59 @@ export const DefaultMenuSchema: MenuUISchema = {
   [SDKKinds.DeleteActivity]: {
     label: formatMessage('Delete activity'),
     submenu: [SubmenuNames.PropertyManagement],
+  },
+  // Teams options
+  [SDKKinds.GetMeetingParticipant]: {
+    label: formatMessage('Get meeting participant information'),
+    submenu: [SubmenuNames.TeamsActions],
+  },
+  [SDKKinds.GetMember]: {
+    label: formatMessage('Get member information'),
+    submenu: [SubmenuNames.TeamsActions],
+  },
+  [SDKKinds.GetPagedMembers]: {
+    label: formatMessage('Get paged members'),
+    submenu: [SubmenuNames.TeamsActions],
+  },
+  [SDKKinds.GetPagedTeamMembers]: {
+    label: formatMessage('Get paged Team members'),
+    submenu: [SubmenuNames.TeamsActions],
+  },
+  [SDKKinds.GetTeamChannels]: {
+    label: formatMessage('Get Team channels'),
+    submenu: [SubmenuNames.TeamsActions],
+  },
+  [SDKKinds.GetTeamDetails]: {
+    label: formatMessage('Get Team details'),
+    submenu: [SubmenuNames.TeamsActions],
+  },
+  [SDKKinds.GetTeamMember]: {
+    label: formatMessage('Get Team member'),
+    submenu: [SubmenuNames.TeamsActions],
+  },
+  [SDKKinds.SendMessageToTeamsChannel]: {
+    label: formatMessage('Message to Teams channel'),
+    submenu: [SubmenuNames.TeamsResponses],
+  },
+  [SDKKinds.SendMessagingExtensionAuthResponse]: {
+    label: formatMessage('Messaging extension auth response'),
+    submenu: [SubmenuNames.TeamsResponses],
+  },
+  [SDKKinds.SendMessagingExtensionQueryLinkResponse]: {
+    label: formatMessage('Query link response'),
+    submenu: [SubmenuNames.TeamsResponses],
+  },
+  [SDKKinds.SendTaskModuleCardResponse]: {
+    label: formatMessage('Task module card response'),
+    submenu: [SubmenuNames.TeamsResponses],
+  },
+  [SDKKinds.SendTaskModuleUrlResponse]: {
+    label: formatMessage('Task module url response'),
+    submenu: [SubmenuNames.TeamsResponses],
+  },
+  [SDKKinds.SendTaskModuleMessageResponse]: {
+    label: formatMessage('Task module message response'),
+    submenu: [SubmenuNames.TeamsResponses],
   },
   [SDKKinds.GetActivityMembers]: {
     label: formatMessage('Get activity members'),

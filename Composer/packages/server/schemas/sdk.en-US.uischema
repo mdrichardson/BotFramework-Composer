@@ -11,6 +11,18 @@
             }
         }
     },
+    "Microsoft.Ask": {
+        "form": {
+            "label": "Send a response to ask a question",
+            "subtitle": "Ask Activity"
+        }
+    },
+    "Microsoft.AttachmentInput": {
+        "form": {
+            "label": "Prompt for a file or an attachment",
+            "subtitle": "Attachment Input"
+        }
+    },
     "Microsoft.BeginDialog": {
         "form": {
             "label": "Begin a new dialog",
@@ -35,10 +47,28 @@
             "subtitle": "Cancel All Dialogs"
         }
     },
+    "Microsoft.ChoiceInput": {
+        "form": {
+            "label": "Prompt with multi-choice",
+            "subtitle": "Choice Input"
+        }
+    },
+    "Microsoft.ConfirmInput": {
+        "form": {
+            "label": "Prompt for confirmation",
+            "subtitle": "Confirm Input"
+        }
+    },
     "Microsoft.ContinueLoop": {
         "form": {
             "label": "Continue loop",
             "subtitle": "Continue loop"
+        }
+    },
+    "Microsoft.DateTimeInput": {
+        "form": {
+            "label": "Prompt for a date or a time",
+            "subtitle": "Date Time Input"
         }
     },
     "Microsoft.DebugBreak": {
@@ -118,90 +148,6 @@
             "subtitle": "Log Action"
         }
     },
-    "Microsoft.RepeatDialog": {
-        "form": {
-            "label": "Repeat this dialog",
-            "subtitle": "Repeat Dialog"
-        }
-    },
-    "Microsoft.ReplaceDialog": {
-        "form": {
-            "label": "Replace this dialog",
-            "subtitle": "Replace Dialog"
-        }
-    },
-    "Microsoft.SendActivity": {
-        "form": {
-            "label": "Send a response",
-            "subtitle": "Send Activity"
-        }
-    },
-    "Microsoft.SetProperties": {
-        "form": {
-            "label": "Set properties",
-            "subtitle": "Set Properties"
-        }
-    },
-    "Microsoft.SetProperty": {
-        "form": {
-            "label": "Set a property",
-            "subtitle": "Set Property"
-        }
-    },
-    "Microsoft.SignOutUser": {
-        "form": {
-            "label": "Sign out user",
-            "subtitle": "Signout User"
-        }
-    },
-    "Microsoft.SwitchCondition": {
-        "form": {
-            "label": "Branch: Switch (multiple options)",
-            "subtitle": "Switch Condition"
-        }
-    },
-    "Microsoft.ThrowException": {
-        "form": {
-            "label": "Throw an exception",
-            "subtitle": "Throw an exception"
-        }
-    },
-    "Microsoft.TraceActivity": {
-        "form": {
-            "label": "Emit a trace event",
-            "subtitle": "Trace Activity"
-        }
-    },
-    "Microsoft.Ask": {
-        "form": {
-            "label": "Send a response to ask a question",
-            "subtitle": "Ask Activity"
-        }
-    },
-    "Microsoft.AttachmentInput": {
-        "form": {
-            "label": "Prompt for a file or an attachment",
-            "subtitle": "Attachment Input"
-        }
-    },
-    "Microsoft.ChoiceInput": {
-        "form": {
-            "label": "Prompt with multi-choice",
-            "subtitle": "Choice Input"
-        }
-    },
-    "Microsoft.ConfirmInput": {
-        "form": {
-            "label": "Prompt for confirmation",
-            "subtitle": "Confirm Input"
-        }
-    },
-    "Microsoft.DateTimeInput": {
-        "form": {
-            "label": "Prompt for a date or a time",
-            "subtitle": "Date Time Input"
-        }
-    },
     "Microsoft.NumberInput": {
         "form": {
             "label": "Prompt for a number",
@@ -212,12 +158,6 @@
         "form": {
             "label": "OAuth login",
             "subtitle": "OAuth Input"
-        }
-    },
-    "Microsoft.TextInput": {
-        "form": {
-            "label": "Prompt for text",
-            "subtitle": "Text Input"
         }
     },
     "Microsoft.OnActivity": {
@@ -351,6 +291,126 @@
         "form": {
             "label": "Unknown intent",
             "subtitle": "Unknown intent recognized"
+        }
+    },
+    "Microsoft.RepeatDialog": {
+        "form": {
+            "label": "Repeat this dialog",
+            "subtitle": "Repeat Dialog"
+        }
+    },
+    "Microsoft.ReplaceDialog": {
+        "form": {
+            "label": "Replace this dialog",
+            "subtitle": "Replace Dialog"
+        }
+    },
+    "Microsoft.SendActivity": {
+        "form": {
+            "label": "Send a response",
+            "subtitle": "Send Activity"
+        }
+    },
+    "Microsoft.SetProperties": {
+        "form": {
+            "label": "Set properties",
+            "subtitle": "Set Properties"
+        }
+    },
+    "Microsoft.SetProperty": {
+        "form": {
+            "label": "Set a property",
+            "subtitle": "Set Property"
+        }
+    },
+    "Microsoft.SignOutUser": {
+        "form": {
+            "label": "Sign out user",
+            "subtitle": "Signout User"
+        }
+    },
+    "Microsoft.SwitchCondition": {
+        "form": {
+            "label": "Branch: Switch (multiple options)",
+            "subtitle": "Switch Condition"
+        }
+    },
+    "Microsoft.TextInput": {
+        "form": {
+            "label": "Prompt for text",
+            "subtitle": "Text Input"
+        }
+    },
+    "Microsoft.ThrowException": {
+        "form": {
+            "label": "Throw an exception",
+            "subtitle": "Throw an exception"
+        }
+    },
+    "Microsoft.TraceActivity": {
+        "form": {
+            "label": "Emit a trace event",
+            "subtitle": "Trace Activity"
+        }
+    },
+    "Teams.GetPagedMembers": {
+        "form": {
+            "label": "Get paged members",
+            "subtitle": "Gets members of a one-on-one, group, or team conversation."
+        }
+    },
+    "Teams.GetPagedTeamMembers": {
+        "form": {
+            "label": "Get paged team members",
+            "subtitle": "Gets members for a team conversation."
+        }
+    },
+    "Teams.OnMessagingExtensionFetchTask": {
+        "form": {
+            "label": "Teams messaging extension fetch task",
+            "subtitle": "Invoke activity.name='composeExtension/fetchTask'"
+        }
+    },
+    "Teams.OnTaskModuleFetch": {
+        "form": {
+            "label": "Teams task module fetch",
+            "subtitle": "Invoke activity.name='task/fetch'"
+        }
+    },
+    "Teams.OnTaskModuleSubmit": {
+        "form": {
+            "label": "Teams task module submit",
+            "subtitle": "Invoke activity.name='task/submit'"
+        }
+    },
+    "Teams.SendMessageToTeamsChannel": {
+        "form": {
+            "label": "Send a message to a teams channel",
+            "subtitle": "Create a thread and send a message to a teams channel."
+        }
+    },
+    "Teams.SendMessagingExtensionQueryLinkResponse": {
+        "form": {
+            "label": "Send a query link response",
+            "subtitle": "Send a response to a query link request."
+        }
+    },
+    "Teams.SendTaskModuleCardResponse": {
+        "form": {
+            "label": "Send task module card response",
+            "subtitle": "Send a continue response containing a card."
+        }
+    },
+    "Teams.SendTaskModuleMessageResponse": {
+        "form": {
+            "label": "Send task module message response",
+            "subtitle": "Send a message response containing text only."
+        }
+    },
+    "Teams.SendTaskModuleUrlResponse": {
+        "form": {
+            "label": "Send task module url response",
+            "subtitle": "Send a continue response containing or url."
         }
     }
 }
