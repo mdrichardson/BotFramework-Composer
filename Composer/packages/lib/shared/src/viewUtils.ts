@@ -181,29 +181,29 @@ export const dialogGroups: DialogGroupsMap = {
     label: formatMessage('Other'),
     types: [SDKKinds.AdaptiveDialog],
   },
-  // [DialogGroup.TEAMS_ACTION_TYPES]: {
-  //   label: formatMessage('Teams Actions'),
-  //   types: [
-  //     SDKKinds.GetMeetingParticipant,
-  //     SDKKinds.GetMember,
-  //     SDKKinds.GetPagedMembers,
-  //     SDKKinds.GetPagedTeamMembers,
-  //     SDKKinds.GetTeamChannels,
-  //     SDKKinds.GetTeamDetails,
-  //     SDKKinds.GetTeamMember,
-  //   ],
-  // },
-  // [DialogGroup.TEAMS_RESPONSE_TYPES]: {
-  //   label: formatMessage('Teams Responses'),
-  //   types: [
-  //     SDKKinds.SendMessageToTeamsChannel,
-  //     SDKKinds.SendTaskModuleCardResponse,
-  //     SDKKinds.SendTaskModuleUrlResponse,
-  //     SDKKinds.SendTaskModuleMessageResponse,
-  //     SDKKinds.SendMessagingExtensionAuthResponse,
-  //     SDKKinds.SendMessagingExtensionQueryLinkResponse,
-  //   ],
-  // },
+  [DialogGroup.TEAMS_ACTION_TYPES]: {
+    label: formatMessage('Teams Actions'),
+    types: [
+      SDKKinds.GetMeetingParticipant,
+      SDKKinds.GetMember,
+      SDKKinds.GetPagedMembers,
+      SDKKinds.GetPagedTeamMembers,
+      SDKKinds.GetTeamChannels,
+      SDKKinds.GetTeamDetails,
+      SDKKinds.GetTeamMember,
+    ],
+  },
+  [DialogGroup.TEAMS_RESPONSE_TYPES]: {
+    label: formatMessage('Teams Responses'),
+    types: [
+      SDKKinds.SendMessageToTeamsChannel,
+      SDKKinds.SendTaskModuleCardResponse,
+      SDKKinds.SendTaskModuleUrlResponse,
+      SDKKinds.SendTaskModuleMessageResponse,
+      SDKKinds.SendMessagingExtensionAuthResponse,
+      SDKKinds.SendMessagingExtensionQueryLinkResponse,
+    ],
+  },
 };
 
 export function getDialogGroupByType(type) {
